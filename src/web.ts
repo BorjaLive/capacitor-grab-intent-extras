@@ -1,10 +1,10 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { GrabIntentExtrasPlugin } from './definitions';
+import type { GrabIntentExtrasPlugin, IntentExtras } from './definitions';
 
 export class GrabIntentExtrasWeb extends WebPlugin implements GrabIntentExtrasPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async getIntentExtras(): Promise<{ extras: IntentExtras }> {
+    console.log('EXTRAS ON THE WEB ARE NOT SUPPORTED');
+    return { extras: {} };
   }
 }

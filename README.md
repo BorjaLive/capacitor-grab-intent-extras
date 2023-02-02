@@ -11,9 +11,54 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`getIntentExtras()`](#getintentextras)
+* [`addListener('intentExtras', ...)`](#addlistenerintentextras)
+* [Interfaces](#interfaces)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### getIntentExtras()
+
+```typescript
+getIntentExtras() => Promise<{ extras: IntentExtras; }>
+```
+
+**Returns:** <code>Promise&lt;{ extras: <a href="#intentextras">IntentExtras</a>; }&gt;</code>
+
+--------------------
+
+
+### addListener('intentExtras', ...)
+
+```typescript
+addListener(eventName: 'intentExtras', listenerFunc: (extras: IntentExtras) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
+```
+
+| Param              | Type                                                                       |
+| ------------------ | -------------------------------------------------------------------------- |
+| **`eventName`**    | <code>'intentExtras'</code>                                                |
+| **`listenerFunc`** | <code>(extras: <a href="#intentextras">IntentExtras</a>) =&gt; void</code> |
+
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### IntentExtras
+
+
+#### PluginListenerHandle
+
+| Prop         | Type                                      |
+| ------------ | ----------------------------------------- |
+| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
+
 </docgen-api>

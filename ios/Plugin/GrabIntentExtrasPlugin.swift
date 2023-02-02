@@ -9,10 +9,10 @@ import Capacitor
 public class GrabIntentExtrasPlugin: CAPPlugin {
     private let implementation = GrabIntentExtras()
 
-    @objc func echo(_ call: CAPPluginCall) {
+    @objc func getIntentExtras(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         call.resolve([
-            "value": implementation.echo(value)
+            "extras": implementation.getIntentExtras()
         ])
     }
 }

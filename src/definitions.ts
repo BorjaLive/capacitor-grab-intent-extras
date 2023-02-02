@@ -1,3 +1,8 @@
+import { PluginListenerHandle } from "@capacitor/core";
+
 export interface GrabIntentExtrasPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getIntentExtras(): Promise<{ extras: IntentExtras }>;
+  addListener(eventName: 'intentExtras', listenerFunc: (extras: IntentExtras) => void): Promise<PluginListenerHandle> & PluginListenerHandle;
 }
+
+export interface IntentExtras {[key: string]: string};
