@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BorjaLive/capacitor-grab-intent-extras.git.git"
+    "url": "git+https://github.com/BorjaLive/capacitor-grab-intent-extras.git"
   },
   "bugs": {
     "url": "https://github.com/BorjaLive/capacitor-grab-intent-extras.git/issues"
@@ -41,7 +41,8 @@
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish:cocoapod": "pod trunk push ./CapacitorGrabIntentExtras.podspec --allow-warnings"
   },
   "devDependencies": {
     "@capacitor/android": "^4.0.0",
