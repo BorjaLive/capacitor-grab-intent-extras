@@ -1,6 +1,6 @@
 {
   "name": "capacitor-grab-intent-extras",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Exposes the extras of the intent.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
